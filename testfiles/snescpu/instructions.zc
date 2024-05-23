@@ -1,0 +1,31 @@
+//Implied instructions
+clc
+cld
+// Immediate instructions
+lda #123
+lda #%10001000
+// Direct Page instructions
+lda 500
+lda $00Af
+// Indexed instructions
+lda $05,x
+lda $2140,x
+lda $7e0040,x
+lda $2140,y
+// Direct Page indirect
+lda ($02)
+// Direct Page indirect long
+lda [$af]
+// Direct Page indexed indirect
+lda ($1f,x)
+// Indirect indexed
+lda ($dc),y
+// Indirect indexed long
+lda [$ff],y
+// Block move
+mvp $2c,$2d
+mvn $0f,$10
+// Stack relative
+lda $0c,s
+// Stack relatve indirect indexed
+lda ($3c,s),y

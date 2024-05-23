@@ -1,0 +1,18 @@
+// Invalid argument
+lda patate_pweill
+lda #345
+// Invalid token
+lda !123
+// No closing parenthesis
+lda ($124
+lda #$02
+// No closing bracket
+lda [$2140
+lda #$05
+// No closing parenthesis, indexed
+lda ($ac,x
+lda #$06
+// Wrong register for indexed indirect
+lda ($ac,y)
+// No register argument
+lda ($dc),
